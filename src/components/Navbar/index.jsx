@@ -1,9 +1,17 @@
 import Button from '../Button';
 import Logo from '../logo';
+import { motion } from 'framer-motion';
 
 const NavBar = () => {
   return (
-    <div className="bg-primary w-full flex justify-between items-center py-5 px-20">
+    <motion.div
+      className="bg-primary w-full flex justify-between items-center py-5 px-20"
+      //  TODO: When animating the bg is remaining white
+
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: 1, duration: 1 }}
+    >
       <section className="max-w-32">
         <Logo />
       </section>
@@ -24,7 +32,14 @@ const NavBar = () => {
       </section>
 
       <section className="flex gap-3">
-        <Button variant="fill" label={'Log In'} className={'w-24 py-[6px]'} />
+        <motion.div
+        // initial={{ opacity: 0, scale: 0.1 }}
+        // animate={{ opacity: 1, scale: 1 }}
+        // whileHover={{ scale: 1.1 }}
+        // whileTap={{ scale: 1 }}
+        >
+          <Button variant="fill" label={'Log In'} className={'w-24 py-[6px]'} />
+        </motion.div>
 
         <Button
           variant="outlined"
@@ -32,7 +47,7 @@ const NavBar = () => {
           className={'w-24 py-[6px]'}
         />
       </section>
-    </div>
+    </motion.div>
   );
 };
 
