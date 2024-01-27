@@ -25,6 +25,7 @@ const image = {
     y: 20,
     rotate: 0,
     transition: {
+      duration: 0.7,
       y: {
         duration: 2,
         repeat: Infinity,
