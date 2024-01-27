@@ -1,6 +1,7 @@
 import Button from '../Button';
 import { motion } from 'framer-motion';
 
+// text animation
 const intro = {
   hidden: { opacity: 0 },
   visible: {
@@ -15,6 +16,23 @@ const intro = {
 const introChildren = {
   hidden: { opacity: 0, y: -200 },
   visible: { opacity: 1, y: 0 },
+};
+
+// image animation
+const image = {
+  initial: { y: 0, rotate: 20 },
+  animate: {
+    y: 20,
+    rotate: 0,
+    transition: {
+      y: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: 'reverse',
+        ease: 'easeInOut',
+      },
+    },
+  },
 };
 
 const Hero = () => {
@@ -54,9 +72,14 @@ const Hero = () => {
         {/* framer */}
       </section>
 
-      <section className="w-11/12">
+      <motion.section
+        variants={image}
+        initial="initial"
+        animate="animate"
+        className="w-11/12"
+      >
         <img src="../../../src/assets/headskull.png" className="image-mask" />
-      </section>
+      </motion.section>
     </div>
   );
 };
