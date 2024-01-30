@@ -21,13 +21,13 @@ const NavBar = () => {
             <Button
             variant="fill"
             label={"Log In"}
-            className={'w-24 py-[6px]'}
+            className={'py-2 px-7'}
             />
 
             <Button
             variant="outlined"
             label={"Sign Up"}
-            className={'w-24 py-[6px]'}
+            className={'py-2 px-7'}
             />
         </section>
     </div>

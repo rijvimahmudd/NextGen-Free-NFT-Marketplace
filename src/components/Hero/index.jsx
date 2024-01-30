@@ -11,13 +11,13 @@ const Hero = () => {
                 <Button
                 variant="fill"
                 label={"Get Started"}
-                className={'w-36 py-3'}
+                className={'py-2 px-7'}
                 />
 
                 <Button
                 variant="outlined"
                 label={"Create NFTs"}
-                className={'w-36 py-3'}
+                className={'py-4 px-7'}
                 />
                 </section>
             </section>

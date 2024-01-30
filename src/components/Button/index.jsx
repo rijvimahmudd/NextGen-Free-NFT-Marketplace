@@ -1,29 +1,21 @@
-import PropTypes from 'proptypes'
-const Button = ({variant='fill', label, className}) => {
-  const buttonVariant = {
-    fill: 'text-white bg-[transparent]',
-    outlined: 'text-white bg-primary',
-  }
+import PropTypes from 'proptypes';
+
+const Button = ({ variant = 'fill', label, className, border=true }) => {
+console.log("variant", variant, "label", label, "className", className);
   return (
-    <div>
-        
-        <div className={`linear-gradient p-[1px] max-w-fit`}>
-        <button
-            className={`py-4 text-base font-medium ${buttonVariant[variant]} ${className}` }
-        >
-          {label}
-        </button>
-          </div>        
-    </div>
-  )
-}
+      <button
+        className={`text-base font-medium text-white bg-[length:${variant === 'fill' ? '100%' : '0'}] bg-no-repeat ${border && "border-gradient"} ${variant === 'fill' ? 'linear-gradient' : 'bg-transparent'} ${className}`}
+      >
+        {label}
+      </button>
+  );
+};
 
 Button.propTypes = {
   variant: PropTypes.oneOf(['fill', 'outlined']),
   label: PropTypes.string.isRequired,
   className: PropTypes.string,
-}
+  border: PropTypes.bool
+};
 
-export default Button
-
-
+export default Button;
