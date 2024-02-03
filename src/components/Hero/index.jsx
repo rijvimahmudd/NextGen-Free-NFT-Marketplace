@@ -1,3 +1,4 @@
+import { headSkull } from "../../providers/images"
 import Button from "../Button"
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
         </section>
 
         <section className="w-11/12">
-            <img src="../../../src/assets/headskull.png" className="image-mask"/>
+            <img src={headSkull} className="image-mask"/>
         </section>
 
     </div>
