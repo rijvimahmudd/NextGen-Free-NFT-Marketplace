@@ -17,7 +17,7 @@ const NavBar = () => {
             </ul>
         </section>
 
-        <section className="flex gap-3">
+        <section className="flex gap-3 text-white">
             <Button
             variant="fill"
             label={"Log In"}

@@ -28,12 +28,14 @@ const Card = ({ cardImg }) => {
           </div>
           <h1>Loura Chin</h1>
         </div>
+        <div className='text-white'>
         <Button
           label={"Buy It Now"}
-          className={"w-full py-2 rounded-md font-normal"}
+          className={"w-full py-2 rounded-md font-normal text-white"}
           variant={"fill"}
           border={false}
         />
+        </div>
       </div>
       </section>
   );

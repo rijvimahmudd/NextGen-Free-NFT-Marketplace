@@ -6,6 +6,8 @@ import CollectNFTs from './components/CollectNFTs'
 import TopCreators from './components/TopCreators'
 import Newsletter from './components/Newsletter'
 import Collections from './components/Collections'
+import Blog from './components/Blog'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
       <TopCreators/>
       <Newsletter/>
       <Collections/>
+      <Blog/>
+      <Footer/>
     </>
   )
 }

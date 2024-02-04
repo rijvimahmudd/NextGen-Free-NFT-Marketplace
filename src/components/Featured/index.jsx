@@ -6,7 +6,7 @@ const Featured = () => {
 
   return (
     <div>
-      <section className="px-20 flex flex-row items-center justify-between py-20 bg-primary">
+      <section className="px-20 flex flex-row flex-wrap gap-y-10 items-center justify-between py-20 bg-primary">
         {imgs.map((img) => (
           <img src={img} key={img} className="w-full h-auto max-w-[130px]" />
         ))}
